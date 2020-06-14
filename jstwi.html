@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="JSTwi - マルチアカウント対応のTwitterクライアントです。HTMLとJavascriptだけで作成しているので、ブラウザがあればWindowsでもMacでもLinuxでもOS問わず動きます。">
+<meta name="keywords" content="Twitter,ツイッター,クライアント,マルチアカウント,HTML,Javascript,ブラウザ">
+<link rel='stylesheet' href='css/style.css'>
+
+<link rel='shortcut icon' href='favicon.ico'>
+<link rel='icon' href='favicon.ico' type='image/vnd.microsoft.icon'>
+
+<!-- Lightbox2 -->
+<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="screen">
+<script src="js/prototype.js" type="text/javascript"></script>
+<script src="js/scriptaculous.js?load=effects,builder" type="text/javascript"></script>
+<script src="js/lightbox.js" type="text/javascript"></script>
+
+<title>JSTwi</title>
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-17388887-1']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+</head>
+
+<body>
+
+<div class='main'>
+
+<div class='header'>
+<a href='https://www.jstwi.com'>JSTwi</a>
+</div>
+
+<div class='top'>
+<div class='tweet'>
+<a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="k_e_n1" data-lang="ja">Tweet</a><script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+<a href="https://twitter.com/jstwi_support" class="twitter-follow-button" data-show-count="false" data-lang="ja">Follow @jstwi_support</a>
+<script src="https://platform.twitter.com/widgets.js" type="text/javascript"></script>
+</div>
+
+<div class='lastmod'>
+last modified 2011/07/30
+</div>
+</div>
+
+<div class='menu'>
+<ul>
+<li><a href='#cont1'>概要</a></li>
+<li><a href='#cont2'>動作環境</a></li>
+<li><a href='#cont3'>スクリーンショット</a></li>
+<li><a href='#cont4'>特徴</a></li>
+<!--<li><a href='#cont5'>ダウンロード</a></li>-->
+<li><a href='manual/manual.html'>操作説明</a></li>
+<li><a href='history.html'>更新履歴</a></li>
+<li><a href='#cont6'>リンク</a></li>
+<li><a href='#cont7'>サポート</a></li>
+</ul>
+</div>
+
+<div class='clear'></div>
+
+<div class='contents' id='cont1'>
+<h1 class='title'>概要</h1>
+<p class='text'>
+マルチアカウント対応の<a href='https://twitter.com'>Twitter</a>クライアントです。HTMLとJavascriptだけで作成しているので、ブラウザがあればWindowsでもMacでもLinuxでもOS問わず動きます。<br>
+<br>
+<span style='color: red;'>API1.1への対応を行なっていないので、2013/06/12をもちましてJSTwiの提供を終了しました。長らくご愛顧いただき誠にありがとうございました。</span><br>
+</p>
+</div>
+
+<div class='contents' id='cont2'>
+<h1 class='title'>動作環境</h1>
+<p class='text'>
+以下のブラウザで動作確認を行っています。
+</p>
+<ul>
+<li>Google Chrome 9.0<span style='color: red;'>※2011/5/14 POST処理でエラーが発生する問題がありますので、Google Chrome以外のブラウザをご使用ください</span></li>
+<li>Mozilla Firefox 11.0</li>
+<li>InternetExplorer 8<span style='color: red;'>※9での動作確認は行なっていません。</span></li>
+<li style='color: #808080'>Opera 11<span style='color: red;'>※2011/12/18 ver11.60で動作しないことを確認しました(11.50までは動作確認)。</span></li>
+</ul>
+<p class='text'>
+</p>
+</div>
+
+<div class='contents' id='cont3'>
+<h1 class='title'>スクリーンショット</h1>
+<p class='text'>
+<a href='images/screenshot1.png' rel='lightbox'><img src='images/screenshot1_s.png'></a>
+<a href='images/screenshot2.png' rel='lightbox'><img src='images/screenshot2_s.png'></a>
+<a href='images/screenshot3.png' rel='lightbox'><img src='images/screenshot3_s.png'></a>
+</p>
+</div>
+
+<div class='contents' id='cont4'>
+<h1 class='title'>特徴</h1>
+<div class='text'>
+<span class='feature'>複数アカウント対応</span>
+<img src='images/feature_1.png'>
+<p>複数のTwitterアカウントを登録し、切り替えて使用することができます。ブラウザのタブ等を利用すれば、複数のアカウントを同時に操作することも可能です。</p>
+<div class='clear'></div>
+
+<span class='feature'>短縮URL展開</span>
+<img src='images/feature_2.png'>
+<p>短縮URLの短縮前URLを表示することができます。現在対応している短縮URLはbit.ly、j.mp、tinyurl.com、goo.gl、ow.ly、u.nu、amzn.to、p.tl、am6.jp、htn.to、nico.ms、t.co、moby.to、tl.gd、a.r10.to、s.nikkei.com、moi.st、ht.ly、ff.im、dlvr.itです。</p>
+<div class='clear'></div>
+
+<span class='feature'>画像サムネイル表示</span>
+<img src='images/feature_3.png'>
+<p>画像のサムネイルを表示することができます。現在対応しているサイトはtwitpic.com、ow.ly、yfrog.com、twitvideo.jp、plixi.com(tweetphoto.com)、p.twipple.jp、movapic.com、pckles.com、フォト蔵、img.lyです。</p>
+<div class='clear'></div>
+
+<span class='feature'>NGワード設定</span>
+<img src='images/feature_4.png'>
+<p>NGワードを設定し、指定した文字列を含むツイートをタイムライン上に表示しないようにすることができます。</p>
+<div class='clear'></div>
+
+<span class='feature'>URL短縮(j.mp)</span>
+<img src='images/feature_5.png'>
+<p>URLの短縮を当アプリケーション上で行うことができます。(j.mpのアカウントがある場合はj.mp、ない場合はgoo.gl)</p>
+<div class='clear'></div>
+
+<span class='feature'>片思いチェック</span>
+<img src='images/feature_6.png'>
+<p>片思いユーザ(＝こちらがフォローしているが、相手側がフォローしていない)をタイムライン上で明示的に表示することができます。</p>
+<div class='clear'></div>
+
+<span class='feature'>返信元表示</span>
+<img src='images/feature_7.png'>
+<p>in_reply_toを含むツイートの場合は、返信元ツイートの内容を表示することができます。返信元の返信元…と遡って表示することもできます。</p>
+<div class='clear'></div>
+
+<span class='feature'>日⇔英翻訳(Google翻訳API)</span>
+<img src='images/feature_8.png'>
+<p>Googleの翻訳APIを使用して、ツイートを日→英翻訳、英→日翻訳することができます。</p>
+<div class='clear'></div>
+
+<span class='feature'>ゲストモード(認証なし)</span>
+<img src='images/feature_9.png'>
+<p>OAuth認証なしで当アプリケーションを使用することができます。パブリックタイムラインの表示やユーザごとのタイムライン表示が認証なしで使用できます。</p>
+<div class='clear'></div>
+
+<span class='feature'>ニコニコ動画サムネイル表示</span>
+<img src='images/feature_10.png'>
+<p>ニコニコ動画のサムネイルを表示することができます。</p>
+<div class='clear'></div>
+
+<span class='feature'>GoogleMap表示</span>
+<img src='images/feature_11.png'>
+<p>ツイートに位置情報が設定されている場合は、周辺地図をGoogleMapで表示することができます。</p>
+<div class='clear'></div>
+
+<span class='feature'>動画再生</span>
+<img src='images/feature_13.png'>
+<p>動画のインライン再生ができます。現在対応しているサイトはYoutube、ニコニコ動画です。（※ニコニコ動画は、<a href='https://www.jstwi.com/jstwi_web/index.html'>JSTwi web</a>でのみ再生できます。）</p>
+<div class='clear'></div>
+
+<span class='feature'>ミュート機能</span>
+<img src='images/feature_14.png'>
+<p>指定したユーザを一時的にタイムライン上に表示しないようにすることができます。</p>
+<div class='clear'></div>
+
+<span class='feature'>お気に入りユーザ</span>
+<img src='images/feature_15.png'>
+<p>お気に入りに登録したユーザの最新ツイート一覧が表示できます。</p>
+<div class='clear'></div>
+
+<span class='feature'>ツイートマップ</span>
+<img src='images/feature_16.png'>
+<p>位置情報付きのツイートを1枚の地図に表示することができます。</p>
+<div class='clear'></div>
+
+</div>
+</div>
+
+<!--
+<div class='contents' id='cont5'>
+<h1 class='title'>ダウンロード</h1>
+<p class='text'>ダウンロード版の配布は終了しました。</p>
+
+<p class='text'>2011/07/30にリリースしました。</p>
+<a class='dllink' href='jstwi.ZIP'>Download</a>
+
+<div class='line'></div>
+<p class='text'>インストールせずに使いたい方はこちらをご利用ください。<br></p>
+<a class='dllink' href='jstwi_web/index.html'>JSTwi web</a>
+</div>
+-->
+
+<div class='contents' id='cont6'>
+<h1 class='title'>リンク</h1>
+<p class='text'>
+JSTwiで利用させていただいているライブラリです。
+</p>
+<p class='text'>
+<ul>
+<li><a href='http://jquery.com/'>jQuery</a></li>
+<li><a href='http://info.dwango.co.jp/rd/2010/04/javascript-jarty.html'>Jarty</a></li>
+<li><a href='http://code.google.com/p/jquery-jsonp/'>jQuery-JSONP</a></li>
+<li><a href='http://oauth.googlecode.com/svn/code/javascript/'>oauth.js</a></li>
+<li><a href='http://pajhome.org.uk/crypt/md5/scripts.html'>sha1.js</a></li>
+</ul>
+</div>
+
+<div class='contents' id='cont7'>
+<h1 class='title'>サポート</h1>
+<div class='sup'>
+	<p class='text'>
+	ご意見・ご要望等は<a href="https://twitter.com/JSTwi_support">@JSTwi_support</a>までご連絡ください。<br>
+	</p>
+	<br>
+</div>
+
+</div>
+
+<div class='footer'>
+<div class='cpr'>copyright &copy; 2010-2011 <a href="https://twitter.com/k_e_n1">KEN1</a>.</div>
+<div class='gae'><a href='https://code.google.com/intl/ja/appengine/'><img src="https://code.google.com/appengine/images/appengine-silver-120x30.gif" alt="Powered by Google App Engine"></a></div>
+</div>
+
+</div>
+
+</body>
+
+</html>

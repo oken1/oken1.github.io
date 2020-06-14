@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv='Content-Script-Type' content='text/javascript'>
+<link rel='stylesheet' href='css/style.css'>
+
+<title>JSTwi - 更新履歴</title>
+
+</head>
+
+<body>
+<div class='main'>
+
+<div class='header'>
+<a href='https://www.jstwi.com'>JSTwi</a>
+</div>
+
+<div class='history'>
+	<div class='date'>2011/07/30</div>
+	<div class='cont'>
+	ハッシュタグの抽出処理に不具合があったので修正しました。<br>
+	</div>
+
+	<div class='date'>2011/07/13</div>
+	<div class='cont'>
+	日本語ハッシュタグに対応しました。<br>
+	</div>
+
+	<div class='date'>2011/07/08</div>
+	<div class='cont'>
+	日本語名リストの取得が行えない不具合を修正した。<br>
+	</div>
+
+	<div class='date'>2011/04/28</div>
+	<div class='cont'>
+	APIの呼び出しをhttpsにするとTL取得の遅延が発生するようなので、<br>
+	httpを使うかhttpsを使うか設定画面で変更できるようにした。<br>
+	※初期値はhttpになっているので、APIの呼び出しで「不適切な署名」のエラーが出る人のみ<br>
+	httpsに変えてください<br>
+	</div>
+
+	<div class='date'>2011/04/23</div>
+	<div class='cont'>
+	API呼び出し時のURLをhttp→httpsに変更した(公式でログインした状態で、JSTwiが使えなくなる不具合対応)<br>
+	東京電力電力供給状況の表示機能を削除した。<br>
+	</div>
+
+	<div class='date'>2011/03/24</div>
+	<div class='cont'>
+	JSTwi webで東京電力電力供給状況の表示を行えるようにした。<br>
+	※電力の供給状況を気にする必要がなくなるまでの期間限定機能です。<br>
+	<a href='http://tepco-usage-api.appspot.com/'>こちら</a>で提供されているAPIを使用しています。<br>
+	</div>
+
+	<div class='date'>2011/03/02</div>
+	<div class='cont'>
+	j.mpのアカウントがない場合はgoo.glでURLの短縮ができるようにした。
+	</div>
+
+	<div class='date'>2011/02/25</div>
+	<div class='cont'>
+	instagramのサムネイルを表示できるようにした。<br>
+	</div>
+
+	<div class='date'>2011/02/14</div>
+	<div class='cont'>
+	設定画面を変更。<br>
+	</div>
+
+	<div class='date'>2011/02/11</div>
+	<div class='cont'>
+	検索タブにユーザ検索ボタンを追加。<br>
+	ユーザ名で検索できるようにした。<br>
+	</div>
+
+	<div class='date'>2011/02/10</div>
+	<div class='cont'>
+	テキストボックスの背景色を白色にする色設定を追加。<br>
+	</div>
+
+	<div class='date'>2011/02/06</div>
+	<div class='cont'>
+	jQueryを1.4.3→1.5に入れ替えた。<br>
+	img.lyのサムネイル表示ができるようにした。<br>
+	</div>
+
+	<div class='date'>2011/02/04</div>
+	<div class='cont'>
+	ゲストモードのときにハッシュタグで検索をするとエラーになる不具合を修正。<br>
+	タイムライン上でツイートにカーソルを乗せたときに色が変わるのをやめた。<br>
+	検索タブのGoogleボタンを削除した。<br>
+	</div>
+
+	<div class='date'>2011/01/19</div>
+	<div class='cont'>
+	DOCTYPEをhtml5に変更。<br>
+	一部の表示が崩れたので調整。<br>
+	</div>
+
+	<div class='date'>2011/01/15</div>
+	<div class='cont'>
+	お気に入りユーザ一覧の表示しきれないツイートの表示位置を変更。<br>
+	ユーザタブの表示しきれないプロフィールの表示位置を変更。<br>
+	</div>
+
+	<div class='date'>2011/01/14</div>
+	<div class='cont'>
+	ユーザタブに検索ボタンを設置。<br>
+	'@'+ユーザ名で検索できるようにした。<br>
+	</div>
+
+	<div class='date'>2011/01/12</div>
+	<div class='cont'>
+	メニューバーに表示するボタンを設定画面で設定できるようにした。<br>
+	</div>
+
+	<div class='date'>2011/01/10</div>
+	<div class='cont'>
+	NGワード一覧表示時に特殊文字のエスケープをしていなかったのでするようにした。<br>
+	</div>
+
+	<div class='date'>2011/01/08</div>
+	<div class='cont'>
+	ツイートマップボタンを追加。<br>
+	取得済みの位置情報付きツイートを1枚の地図に表示することができるようにした。<br>
+	</div>
+
+	<div class='date'>2011/01/05</div>
+	<div class='cont'>
+	ユーザ情報にランキング(<a href='http://jp.techcrunch.com/archives/20110104twitter-ranking-equation/'>http://jp.techcrunch.com/archives/20110104twitter-ranking-equation/</a>)を表示するようにした。<br>
+	</div>
+
+	<div class='date'>2010/12/30</div>
+	<div class='cont'>
+	IEでCookieが消えていた問題を修正。<br>
+	</div>
+
+	<div class='date'>2010/12/28</div>
+	<div class='cont'>
+	エラーメッセージの出力方法を変更。<br>
+	alertダイアログを表示するのをやめて、画面下部に一定時間メッセージを表示するようにした。<br>
+	</div>
+
+	<div class='date'>2010/12/26</div>
+	<div class='cont'>
+	フォローするとき/解除するときに確認メッセージを表示するようにした。<br>
+	複数人がRTしたツイートの場合、「～と他xx人がリツイート」と表示するようにした。<br>
+	</div>
+
+	<div class='date'>2010/12/24</div>
+	<div class='cont'>
+	Cookie節約作戦4弾実施<br>
+	・アカウント情報をJSON化、終了時に開いていたリストタブの情報とお気に入りユーザ情報をアカウント情報にまとめた。<br>
+	アイコンのURLをアカウント情報に保持するようにした。<br>
+	アイコンのURL取得済みの場合、ログイン画面にアイコンを表示するようにした。<br>
+	</div>
+
+	<div class='date'>2010/12/23</div>
+	<div class='cont'>
+	Ctrl+Enterでもツイートできるようにした。<br>
+	</div>
+
+	<div class='date'>2010/12/21</div>
+	<div class='cont'>
+	リツイート一覧でもっと読むを押したときに読み込んで来るデータがおかしかったので修正。<br>
+	</div>
+
+	<div class='date'>2010/12/19</div>
+	<div class='cont'>
+	Cookie節約作戦1～3弾実施<br>
+	・使用していないCookie削除<br>
+	・アカウント情報を1ユーザ1Cookieにまとめる<br>
+	・設定をJSON化して1つにまとめる<br>
+	アカウントが追加できなくなる不具合が起きにくくなりました。<br>
+	リツイートされたツイートの公式へのリンク先がおかしかったので修正。<br>
+	</div>
+
+	<div class='date'>2010/12/16</div>
+	<div class='cont'>
+	yfrog.comのサムネイルがURL+'.th.jpg'で取得できないものがあったのでURL+':small'に変更した。<br>
+	</div>
+
+	<div class='date'>2010/12/15</div>
+	<div class='cont'>
+	お気に入りユーザの最新ツイート取得時に、最新ツイートの情報が付いていないユーザがいると読込中のまま止まってしまう問題を修正。<br>
+	自分のツイートの色を他の人のツイートと違う色にできる仕組みだけ作った。<br>
+	[ブロックする]ボタンをブロック状態に応じて[ブロックする]⇔[ブロック解除]と切り替わるようにした。<br>
+	</div>
+
+	<div class='date'>2010/12/14</div>
+	<div class='cont'>
+	検索タブにGoogle検索ボタンを設置。<br>
+	Google Ajax Search APIを使ったGoogle検索をJSTwi内で行えるようにした。<br>
+	</div>
+
+	<div class='date'>2010/12/13</div>
+	<div class='cont'>
+	jquery.jsonpプラグインを導入。<br>
+	JSONPでのAPI呼び出し時にタイムアウトの処理を行うようにした。<br>
+	FirefoxでPOSTしたあとにタブのアイコンが読込中のままになってしまう問題を修正。<br>
+	フォト蔵、instagramのサムネイルを表示できるようにした。<br>
+	</div>
+
+	<div class='date'>2010/12/11</div>
+	<div class='cont'>
+	ゲストモード時の実行抑止を強化。<br>
+	色の設定を行っている箇所を分離してjstwi.color.basic.cssに纏めた。<br>
+	設定に色の設定画面を追加。<br>
+	色設定CSSファイルを選択できるようにした。<br>
+	</div>
+
+	<div class='date'>2010/12/10</div>
+	<div class='cont'>
+	検索結果に表示されるクライアントのリンクに余分な文字列が入ってしまう不具合を修正。<br>
+	（今まで'"'で返ってきていたものが'&quot;'になった？）<br>
+	</div>
+
+	<div class='date'>2010/12/09</div>
+	<div class='cont'>
+	ニコニコアプリの短縮URL(http://nico.ms/ap～)を動画と誤認していたので修正。<br>
+	</div>
+
+	<div class='date'>2010/12/08</div>
+	<div class='cont'>
+	テレビ番組表を5分ごとに自動更新するようにした。<br>
+	手動更新ボタンもつけた。<br>
+	TLに表示するアイコンのサイズを0～128pxの範囲で設定できるようにした。<br>
+	</div>
+
+	<div class='date'>2010/12/07</div>
+	<div class='cont'>
+	メニューボタンに検索履歴ボタンを追加。<br>
+	検索履歴＋保存した検索条件の一覧を検索履歴ボタンから表示できるようにした。<br>
+	ユーザ登録時にPINコードの入力エリアが表示されない不具合を修正。<br>
+	</div>
+
+	<div class='date'>2010/12/05</div>
+	<div class='cont'>
+	mixiチェック機能を削除した。<br>
+	</div>
+
+	<div class='date'>2010/12/04</div>
+	<div class='cont'>
+	RSSで配信されている番組表が7局分無いときに読込中のままになってしまう不具合を修正。<br>
+	</div>
+
+	<div class='date'>2010/12/03</div>
+	<div class='cont'>
+	メニューボタンにテレビ番組ボタンを追加。<br>
+	</div>
+
+	<div class='date'>2010/12/02</div>
+	<div class='cont'>
+	新着がないのに、新着ありが出てしまうことがある問題を修正。<br>
+	もっと読むで取得済みのツイートを再取得してしまうことがあったので修正。<br>
+	</div>
+
+	<div class='date'>2010/12/01</div>
+	<div class='cont'>
+	お気に入りユーザ一覧の更新間隔を設定画面で設定できるようにした(30～3600秒、初期値60秒)。<br>
+	</div>
+
+	<div class='date'>2010/11/29</div>
+	<div class='cont'>
+	ステータスIDが53bitを超えた場合の対応。<br>
+	返信元ツイート等が正常に表示されていなかった不具合を修正した。<br>
+	</div>
+
+	<div class='date'>2010/11/27</div>
+	<div class='cont'>
+	お気に入りユーザ一覧の表示位置調整。<br>
+	お気に入りユーザ一覧を1分間隔(仮)で自動更新するようにした。<br>
+	お気に入りユーザ一覧で表示しきれないツイートをツールチップで表示するようにした。<br>
+	</div>
+
+	<div class='date'>2010/11/26</div>
+	<div class='cont'>
+	メニューボタンにお気に入りユーザボタンを追加。<br>
+	お気に入りユーザボタンクリックでお気に入りユーザ一覧を開けるようにした。<br>
+	</div>
+
+	<div class='date'>2010/11/25</div>
+	<div class='cont'>
+	メニューボタンのツールチップ表示を左側に出るようにした。<br>
+	画面の最小サイズを変更。<br>
+	</div>
+
+	<div class='date'>2010/11/24</div>
+	<div class='cont'>
+	お気に入りユーザ機能を実装。<br>
+	ユーザプロフィールからお気に入りに追加/削除ができるようにした。<br>
+	お気に入りユーザのツイートを黄色い枠線が囲うようにした。<br>
+	</div>
+
+	<div class='date'>2010/11/23</div>
+	<div class='cont'>
+	プロフィールのアイコンをクリックしたときに元サイズのイメージを表示するようにした。<br>
+	今までアイコンクリックで表示していた表示しきれない分のプロフィールは、アイコン横の文字列部分をクリックしたときに表示するようにした。<br>
+	pckles.com(pckl.es)のサムネイル表示対応。<br>
+	DMの日付部分を公式へのリンクにしないようにした。<br>
+	</div>
+
+	<div class='date'>2010/11/12</div>
+	<div class='cont'>
+	フォロー/フォロワー一覧の項目からf/f比を削除。<br>
+	代わりに最終ツイート日を追加。<br>
+	</div>
+
+	<div class='date'>2010/11/11</div>
+	<div class='cont'>
+	リストタブの状態を保存するようにした。<br>
+	</div>
+
+	<div class='date'>2010/11/09</div>
+	<div class='cont'>
+	リツイートされたツイートの一覧を表示できるようにした。（自分のプロフィール→リツイート→リツイートされた）<br>
+	</div>
+
+	<div class='date'>2010/11/06</div>
+	<div class='cont'>
+	テキストエリア内でワードラップしないようにした(IE/Chrome以外では効果なし？)。<br>
+	</div>
+
+	<div class='date'>2010/11/03</div>
+	<div class='cont'>
+	設定に「新着ツイートにスクロール」を追加。<br>
+	新着を自動で読み込んだときに、トップにスクロールするかそのままかを設定出来るようにした。<br>
+	</div>
+
+	<div class='date'>2010/10/31</div>
+	<div class='cont'>
+	ユーザタブ、検索タブ切替処理を見直して不要なウェイトをなくした。<br>
+	色の調整。TL表示部のグラデーションをやめた。<br>
+	</div>
+
+	<div class='date'>2010/10/30</div>
+	<div class='cont'>
+	スクリーン名が数字だけの人のプロフィール表示、フォロー設定/解除、ブロック指定が正常に行えなかった不具合を修正。<br>
+	DM送信もできていなかったので修正。<br>
+	RTした人のアイコンを"～がリツイート"の横に表示するようにした。<br>
+	</div>
+
+	<div class='date'>2010/10/28</div>
+	<div class='cont'>
+	タブのデザインを変更。<br>
+	</div>
+
+	<div class='date'>2010/10/27</div>
+	<div class='cont'>
+	ボタンのデザインを変更。<br>
+	新着チェック間隔の最大値を3600秒に変更。<br>
+	</div>
+
+	<div class='date'>2010/10/26</div>
+	<div class='cont'>
+	一番下までスクロールしたときに自動で「もっと読む」を実行するようにした。<br>
+	新着自動読み込みがONの場合、TLの先頭にスクロールしないようにした。<br>
+	</div>
+
+	<div class='date'>2010/10/24</div>
+	<div class='cont'>
+	入力可能文字数チェック処理を少しだけ改善(それほど大きな変化はないと思う)。<br>
+	</div>
+
+	<div class='date'>2010/10/23</div>
+	<div class='cont'>
+	TL上で非公開アカウントの名前の横に鍵アイコンを表示するようにした。<br>
+	TL上で認証済みアカウントの名前の横に認証済みアイコンを表示するようにした。<br>
+	オプションに「このユーザを非表示」を追加。<br>
+	非表示指定したユーザのツイートをタイムライン上に表示しないようにした。<br>
+	自分のプロフィールに「非表示ユーザ」ボタンを設置。非表示ユーザの表示と解除ができるようにした。<br>
+	</div>
+
+	<div class='date'>2010/10/22</div>
+	<div class='cont'>
+	フォロー設定、解除実行後にユーザ情報取得要求を行わないようにした。<br>
+	検索履歴の上位に保存した検索条件を表示するようにした。<br>
+	検索タブに「保存」ボタンを設置。検索条件の保存できるようにした。<br>
+	自分のプロフィールに「保存した検索」ボタンを設置。保存した検索条件の表示と破棄ができるようにした。<br>
+	</div>
+
+	<div class='date'>2010/10/21</div>
+	<div class='cont'>
+	返信、引用ボタンを押したあとにカーソル位置を移動するようにした。(返信…テキストの末尾、引用…テキストの先頭)<br>
+	リストタブからフォローしているリストも見られるようにした。<br>
+	非公開アカウントの場合、ユーザのプロフィールに「非公開アカウント」と表示するようにした。<br>
+	</div>
+
+	<div class='date'>2010/10/20</div>
+	<div class='cont'>
+	テキストボックス関連のCSSをjstwi.cssから切り離してjstwi.textbox.cssにした。<br>
+	フォロー/フォロワー一覧のソート処理改善。IEでソートに時間がかかっていたのを直した。<br>
+	</div>
+
+	<div class='date'>2010/10/19</div>
+	<div class='cont'>
+	movapic.comのサムネイル表示対応。<br>
+	favicon.ico差し替え。<br>
+	</div>
+
+	<div class='date'>2010/10/18</div>
+	<div class='cont'>
+	アイコンクリックで表示するユーザプロフィールのスタイル(背景や文字色)を公式の設定と同じになるようにした。<br>
+	</div>
+
+	<div class='date'>2010/10/17</div>
+	<div class='cont'>
+	ボタン関連のCSSをjstwi.cssから切り離してjstwi.button.cssにした。<br>
+	タブ関連のCSSをjstwi.cssから切り離してjstwi.tab.cssにした。<br>
+	jQuery1.4.3対応（mouseover→mouseenter、mouseout→mouseleave）。<br>
+	ボタンの背景をイメージにした。<br>
+	</div>
+
+	<div class='date'>2010/10/16</div>
+	<div class='cont'>
+	ユーザ切り替えでユーザを変更した後も、変更前のユーザの新着チェック処理が動いているままであった問題を修正<br>
+	</div>
+
+	<div class='date'>2010/10/15</div>
+	<div class='cont'>
+	ツールチップの表示/非表示処理が必要のない箇所で動いていたので、必要な箇所でのみ実行するように修正。<br>
+	Firefoxで検索文字列入力時に日本語入力確定(Enter押下)で検索を実行してしまう問題を修正。<br>
+	ユーザ情報の表示履歴を検索履歴と同様に表示するようにした。<br>
+	</div>
+
+	<div class='date'>2010/10/12</div>
+	<div class='cont'>
+	TwitterAPIが返すエラーメッセージをGoogle翻訳APIで英→日翻訳して出力するようにした。<br>
+	検索タブに直近の検索結果を残すようにした。<br>
+	</div>
+
+	<div class='date'>2010/10/10</div>
+	<div class='cont'>
+	ツイートボタン横の検索ボタンを排除。<br>
+	左側のMentionタブを排除。<br>
+	</div>
+
+	<div class='date'>2010/10/08</div>
+	<div class='cont'>
+	検索文字列の入力にサジェスト機能を実装。<br>
+	ユーザ、検索タブの入力エリアでEnterを押すと、それぞれ「表示」、「検索」ボタン押下と同じ動作をするようにした。<br>
+	</div>
+
+	<div class='date'>2010/10/07</div>
+	<div class='cont'>
+	検索タブ内に検索文字列入力エリアと検索ボタンを設置した。<br>
+	Firefoxで文字入力が遅すぎる問題があったため、9/22に修正したテキストエリアの入力文字数チェックを元に戻した(keyupイベントを使用する)。<br>
+	検索履歴20件分の表示と選択を行えるようにした。<br>
+	</div>
+
+	<div class='date'>2010/10/06</div>
+	<div class='cont'>
+	動画再生機能の有効/無効設定を行えるようにした。<br>
+	[Ctrl]キーを押しながら[返信]ボタンクリックで、宛先の追加入力ができるようにした。<br>
+	</div>
+
+	<div class='date'>2010/10/04</div>
+	<div class='cont'>
+	ついっぷるフォト(p.twipple.jp)のサムネイル画像を表示できるようにした。<br>
+	更新チェックで最新版じゃなかった場合、最新版のリリース日を表示するようにした。<br>
+	</div>
+
+	<div class='date'>2010/10/03</div>
+	<div class='cont'>
+	ブロックユーザ一覧を表示できるようにした。<br>
+	ブロックの解除も一覧から行えるようにした。<br>
+	</div>
+
+	<div class='date'>2010/09/30</div>
+	<div class='cont'>
+	ニコニコ動画の動画を再生できるようにした。(Webサーバ上で動作させている場合のみ)<br>
+	</div>
+
+	<div class='date'>2010/09/29</div>
+	<div class='cont'>
+	Youtubeの動画を再生できるようにした。<br>
+	</div>
+
+	<div class='date'>2010/09/27</div>
+	<div class='cont'>
+	短縮前URLを既に取得済みの場合、サーバへURL展開要求を行わないようにした。<br>
+	</div>
+
+	<div class='date'>2010/09/26</div>
+	<div class='cont'>
+	リツイート一覧の表示とリツイート解除を出来るようにした。<br>
+	</div>
+
+	<div class='date'>2010/09/25</div>
+	<div class='cont'>
+	9/22の対応でFirefoxでの動作が重くなっていた問題を修正した。<br>
+	</div>
+
+	<div class='date'>2010/09/24</div>
+	<div class='cont'>
+	日付部クリックで公式web(http://twitter.com/名前/status/ステータスID)を開くようにした。<br>
+	</div>
+
+	<div class='date'>2010/09/22</div>
+	<div class='cont'>
+	テキストエリアの入力文字数チェックにkeyupイベントを使うのをやめた(Opera対応)。<br>
+	リスト作成ボタンを撤去した。<br>
+	</div>
+
+	<div class='date'>2010/09/18</div>
+	<div class='cont'>
+	画面表示領域を広げた。<br>
+	フォロー部の領域拡大ボタンをなくした。<br>
+	横幅を今までよりもさらに小さく縮めることができるようにした。<br>
+	</div>
+
+	<div class='date'>2010/09/17</div>
+	<div class='cont'>
+	右Mentionを新着チェックするようにした。<br>
+	（左Mentionは新着チェックなし）<br>
+	</div>
+
+	<div class='date'>2010/09/16</div>
+	<div class='cont'>
+	左Mentionをホームと同様に新着チェックするようにした。<br>
+	ホームとMentionの新着チェック間隔を別々に設定できるようにした。<br>
+	</div>
+
+	<div class='date'>2010/09/15</div>
+	<div class='cont'>
+	右側にMention/ユーザ/検索タブを作った。<br>
+	ユーザ名入力でユーザ情報を表示できるようにした。<br>
+	</div>
+
+	<div class='date'>2010/09/14</div>
+	<div class='cont'>
+	cookie(localStorage)データのキーに'JSTwi.'を付加<br>
+	</div>
+
+	<div class='date'>2010/09/12</div>
+	<div class='cont'>
+	更新チェック機能をつけた。<br>
+	</div>
+
+	<div class='date'>2010/09/11</div>
+	<div class='cont'>
+	mixiチェックボタンを設定で表示/非表示選択できるようにした。<br>
+	返信元ツイートにも返信、削除等ボタン類をつけた。<br>
+	</div>
+
+	<div class='date'>2010/09/10</div>
+	<div class='cont'>
+	mixiチェックを組み込んだ。
+	</div>
+
+	<div class='date'>2010/09/09</div>
+	<div class='cont'>
+	ツイートに位置情報が設定されている場合、GoogleMapで周辺地図を表示できるようにした。
+	</div>
+
+	<div class='date'>2010/09/05</div>
+	<div class='cont'>
+	plixi.com(tweetphoto.com)のサムネイルを表示できるようにした。
+	</div>
+
+	<div class='date'>2010/08/27</div>
+	<div class='cont'>
+	www.nicovideo.jp、nico.msのリンクにカーソルを乗せたとき、ニコニコ動画のサムネイルを表示するようにした。<br>
+	</div>
+
+	<div class='date'>2010/08/20</div>
+	<div class='cont'>
+	ユーザ選択時に認証なしで使用できるゲストモードを追加した。<br>
+	</div>
+
+	<div class='date'>2010/08/18</div>
+	<div class='cont'>
+	フォロー/フォロワー一覧（詳細）にソート機能をつけた。<br>
+	</div>
+
+	<div class='date'>2010/08/14</div>
+	<div class='cont'>
+	RTボタンをなくした。<br>
+	代わりに公式RTアイコンをお気に入りアイコンの下に配置した。<br>
+	QTボタンをRTボタンにした。<br>
+	「コメント QT @xxxx 引用文」としていたのを「コメント RT @xxxx 引用文」にした。<br>
+	同一要求の連続送信を防止する処理を入れた。<br>
+	ホームのタイトルバーが必要ないので削除した。<br>
+	CSSの微調整。<br>
+	</div>
+
+	<div class='date'>2010/08/13</div>
+	<div class='cont'>
+	ホームタブ左上に表示される新着件数をクリックしたとき、新着キューに溜まっているツイートを展開するようにした。<br>
+	（「新着xx件あり」をクリックしたときと同じ動作）<br>
+	</div>
+
+	<div class='date'>2010/08/12</div>
+	<div class='cont'>
+	フォロワーIDリスト作成時に使用するAPIをfollowersからfollowers/idsに変更して処理を高速化した。<br>
+	(フォロワー220人で3.5秒かかっていたのが0.4秒くらいになった）<br>
+	</div>
+
+	<div class='date'>2010/08/10</div>
+	<div class='cont'>
+	返信元ツイートを開いているときに翻訳がおかしくなる不具合を修正。<br>
+	「ブロックする」ボタンを解禁。<br>
+	</div>
+
+	<div class='date'>2010/08/09</div>
+	<div class='cont'>
+	Googleの翻訳APIを使った日→英、英→日翻訳機能を追加。<br>
+	</div>
+
+	<div class='date'>2010/08/08</div>
+	<div class='cont'>
+	横幅もウィンドウサイズに合わせて広がるようにした。<br>
+	タイムアウトの動きがちょっとおかしいので保留。<br>
+	</div>
+
+	<div class='date'>2010/08/07</div>
+	<div class='cont'>
+	API呼び出しにタイムアウト処理を付けた(GETのみ)。<br>
+	※IEではうまく動かないので、IE以外のみ。
+	</div>
+
+	<div class='date'>2010/08/06</div>
+	<div class='cont'>
+	複数アカウント対応。<br>
+	ログアウトボタンをユーザ切り替えボタンにした。<br>
+	</div>
+
+	<div class='date'>2010/08/05</div>
+	<div class='cont'>
+	overflow-x、overflow-yがIE以外でも使用できるようなので採用。<br>
+	タイムライン表示部の不要な横スクロールバーを消した。<br>
+	リストの作成、削除をできるようにした。<br>
+	（リストメンバーの追加/削除はまだ）<br>
+	</div>
+
+	<div class='date'>2010/08/04</div>
+	<div class='cont'>
+	タイムラインの表示形式を切り替えるボタン（1行⇔複数行）を仮設置。<br>
+	</div>
+
+	<div class='date'>2010/08/02</div>
+	<div class='cont'>
+	新着があるとき「ホーム」タブの左上に新着件数を表示するようにした。<br>
+	タイムラインのリサイズ処理改善（Firefox対策）。<br>
+	</div>
+
+	<div class='date'>2010/07/31</div>
+	<div class='cont'>
+	タイムライン表示部の高さをウィンドウサイズに連動するようにした。<br>
+	</div>
+
+	<div class='date'>2010/07/30</div>
+	<div class='cont'>
+	フォントを"Meiryo"に指定していたのをやめてブラウザの設定に従うようにした。<br>
+	フォントのサイズをpt値で指定していたのをやめてlarge,medium,small,x-smallで指定するようにした。<br>
+	デサインを大幅変更。<br>
+	画面上部のタイトルを消した。<br>
+	ログアウト、設定のボタンを右側面に配置した。<br>
+	検索対象を全ての言語か日本語のみかを選択できるようにした。<br>
+	</div>
+
+	<div class='date'>2010/07/29</div>
+	<div class='cont'>
+	フォロワーリストの読み込みを途中でキャンセルできるようにした。<br>
+	キャンセルした場合、片思い表示機能OFFと同じ動きになります。<br>
+	CSSを整理。仕様変更の過程で必要なくなったクラス等削除。<br>
+	</div>
+
+	<div class='date'>2010/07/28</div>
+	<div class='cont'>
+	TL表示のデザインを変更。<br>
+	返信ボタン群、削除ボタンを常時表示するのをやめ、TLの下部にカーソルを乗せたときに表示するようにした。<br>
+	新着キューから読み込んだツイートの背景色を薄い青色で表示するようにした。<br>
+	（背景色の変更は、ホームを更新するか、次の新着を読み込むまで維持される）<br>
+	片思い表示機能追加。<br>
+	こちらがフォローしていて、相手側がフォローを指定ない場合、そのユーザのツイートはボーダー色が赤になります（ホーム、リプライ、リストのみ）<br>
+	片思い表示機能のON/OFFを設定画面で変更できるようにした。<br>
+	</div>
+
+	<div class='date'>2010/07/27</div>
+	<div class='cont'>
+	テンプレートファイル(*.tpl)を削除。<br>
+	テンプレートを全てindex.htmlに埋め込んだ。<br>
+	それによりGoogle Chromeで起動オプション-allow-file-access-from-filesを指定する必要がなくなった。<br>
+	設定画面でj.mp(bit.ly)のアカウント情報を登録出来るようにした。<br>
+	アカウント情報が登録されている場合、URL短縮が行えるようにした。<br>
+	</div>
+
+	<div class='date'>2010/07/26</div>
+	<div class='cont'>
+	フォロー/フォロワー一覧（詳細）にTwitter歴を表示するようにした。<br>
+	</div>
+
+	<div class='date'>2010/07/25</div>
+	<div class='cont'>
+	ツイート先頭の名前表示を変更。<br>
+	　旧）スクリーン名 ツイート<br>
+	　新）スクリーン名(名前)[改行]ツイート<br>
+	フォロー/フォロワー一覧のタイトル部、ユーザ情報のタイトル部にスクリーン名ではなく名前を表示するようにした。<br>
+	</div>
+
+	<div class='date'>2010/07/24</div>
+	<div class='cont'>
+	フォロー/フォロワー一覧の表示切り替え処理を高速化した。<br>
+	</div>
+
+	<div class='date'>2010/07/22</div>
+	<div class='cont'>
+	フォロー/フォロワー一覧の表示形式をアイコン⇔詳細切り替えできるようにした。<br>
+	フォロー/フォロワー一覧の表示領域を拡大出来るようにした。<br>
+	</div>
+
+	<div class='date'>2010/07/21</div>
+	<div class='cont'>
+	NGワードの設定を行えるようにした。<br>
+	NGワードを登録し、設定画面で「NGワード非表示」をチェックすると、<br>
+	NGワードが含まれるツイートが表示されなくなります。<br>
+	※すでに取得済みのものは、タイムラインを更新するまで残ります。<br>
+	</div>
+
+	<div class='date'>2010/07/20</div>
+	<div class='cont'>
+	公式RTの表示/非表示設定をできるようにした。<br>
+	</div>
+
+	<div class='date'>2010/07/19</div>
+	<div class='cont'>
+	返信元の表示を行えるようにした。<br>
+	アイコンをクリックしたときにユーザ情報（全体）をポップアップするようにした。<br>
+	</div>
+
+	<div class='date'>2010/07/16</div>
+	<div class='cont'>
+	http://twitvide.jpのサムネイルを表示できるようにした。<br>
+	ハーフサイズ画面を選択できるようにした。<br>
+	現状はただ右半分を隠しただけだが、将来的にはユーザごとのタブを<br>
+	生成するなどの機能を実装したい。<br>
+	</div>
+
+	<div class='date'>2010/07/15</div>
+	<div class='cont'>
+	ログイン処理を変更。<br>
+	OAuthProxyを使用しない方法を廃止した。<br>
+	DMの送信を行えるようにした。<br>
+	</div>
+
+	<div class='date'>2010/07/12</div>
+	<div class='cont'>
+	テンプレートファイルを起動時に一括読み込みするのをやめた。<br>
+	</div>
+
+	<div class='date'>2010/07/08</div>
+	<div class='cont'>
+	yfrog.comの画像をサムネイル表示できるようにした。<br>
+	DMの送信一覧を表示出来るようにした。<br>
+	</div>
+
+	<div class='date'>2010/07/07</div>
+	<div class='cont'>
+	OAuthProxyを使用した認証時にポップアップブロックされないよう処理を見直した。<br>
+	in_reply_to_status_idを設定するようにした。<br>
+	</div>
+
+	<div class='date'>2010/07/06</div>
+	<div class='cont'>
+	ユーザ情報にTwitter歴を出力するようにした。<br>
+	</div>
+
+	<div class='date'>2010/07/05</div>
+	<div class='cont'>
+	http://www.jstwi.com/にOAuthProxyを設置。<br>
+	OAuthProxyを使用した簡易認証が行えるようにした。<br>
+	http://tweetphoto.comの画像をサムネイル表示できるようにした。（仮）<br>
+	</div>
+
+	<div class='date'>2010/07/04</div>
+	<div class='cont'>
+	タブを消去したあとに、追加を行うと変なタブが生成される不具合対応。<br>
+	新着あり時にホームのもっと読むを実行すると、すでに読み込み済みのツイートが、<br>
+	新着の件数分読まれてしまう不具合対応。<br>
+	http://ow.ly/iの画像をサムネイル表示できるようにした。<br>
+	展開対象の短縮URLを追加。<br>
+	</div>
+
+	<div class='date'>2010/07/03</div>
+	<div class='cont'>
+	とうとうリスト関連処理の追加に着手。<br>
+	リストの表示までは行えるようにした（作成、削除は公式任せ）<br>
+	リストの一覧からリストを選択するとタブが追加される→<br>
+	そのタブを開くとリストに登録されてるユーザのTL表示という流れ。<br>
+	追加されたタブは×ボタンで消去可能。<br>
+	今後追加予定の機能<br>
+	・タブの状態をcookie(LocalStorage)に保存。<br>
+	</div>
+
+	<div class='date'>2010/07/01</div>
+	<div class='cont'>
+	短縮URLの展開対象となるURLを追加。<br>
+	Shift+Enterでツイートできるようにした。<br>
+	設定画面を小さくした。<br>
+	今後追加予定の機能<br>
+	・画面を半分に出来るようにする。<br>
+	・タブの追加、削除<br>
+	・OAuthプロキシを使った認証処理の簡略化<br>
+	</div>
+
+	<div class='date'>2010/06/27</div>
+	<div class='cont'>
+	短縮URLにカーソルを乗せたとき、元のURLをポップアップで表示するようにした。<br>
+	（自作の短縮URL展開API"exturl"を使用）<br>
+	設定画面で、短縮URL展開、画像プレビューのON/OFFを設定できるようにした。<br>
+	</div>
+
+	<div class='date'>2010/06/26</div>
+	<div class='cont'>
+	twitpic.comのリンクにカーソルを乗せたとき、画像のプレビューを表示するようにした。<br>
+	</div>
+
+	<div class='date'>2010/06/25</div>
+	<div class='cont'>
+	ボタン等にグラデーションを使用（Webkit系のみ）。<br>
+	</div>
+
+	<div class='date'>2010/06/24</div>
+	<div class='cont'>
+	ユーザの詳細情報表示領域を3行に縮めた。<br>
+	ユーザの詳細情報をクリックすると、全ての情報がポップアップで出力されるようにした。<br>
+	</div>
+
+	<div class='date'>2010/06/23</div>
+	<div class='cont'>
+	ボタンを押したときに動くようにした。<br>
+	パブリックタイムラインを表示できるようにした。<br>
+	お気に入り一覧を表示できるようにした。<br>
+	DMを表示できるようにした（現状送信や削除は不可）<br>
+	</div>
+
+	<div class='date'>2010/06/20</div>
+	<div class='cont'>
+	認証済みアカウントの場合、「認証済みアカウント」を表示するようにした。<br>
+	設定画面に「新着自動読み込み」を追加した。<br>
+	新着自動読み込みがonの場合、新着ありのお知らせを表示せずに<br>
+	自動的に新着をタイムライン上に出力するようにした。<br>
+	</div>
+
+	<div class='date'>2010/06/17</div>
+	<div class='cont'>
+	ツイート数を表示するようにした。<br>
+	設定画面を作った。<br>
+	新着のキューへの格納順に問題があったため修正した。<br>
+	</div>
+
+	<div class='date'>2010/06/16</div>
+	<div class='cont'>
+	タブ選択部のデザインをよりタブっぽくした。<br>
+	'@'を'リプライ'に変更した。<br>
+	カーソルが乗っているツイートの背景色を黄→緑にした。(お気に入りの★と色が被っていたため)<br>
+	お気に入りの登録/削除を出来るようにした。<br>
+	削除したとき、対象のツイートをタイムラインから消去するようにした。<br>
+	新着チェック周りの処理を改善。（新着チェック時に取得したデータをキューに保存しておくようにした）<br>
+	</div>
+
+	<div class='date'>2010/06/13</div>
+	<div class='cont'>
+	ボタンのデザインを少し変更（ボーダーを細くして色を暗めに）<br>
+	返信ボタン群の文字を1pt小さくした。<br>
+	RTを公式RTにした。<br>
+	公式RT関連の課題：<br>
+	1.home_timelineで取得したときに、自分自身がRTしたものにretweeted_statusがついていないため<br>
+	  RTであると判別できない。<br>
+	2.公式のようにRTしたものを元に戻す方法がない（statuses/destroyで削除すればいい？）<br>
+	</div>
+
+	<div class='date'>2010/06/12</div>
+	<div class='cont'>
+	フォローアイコンのサイズを24x24→18x18にした。<br>
+	画面サイズを1024x700→960x640にした。<br>
+	QT、RT時にAPIを消費していたのをやめた。<br>
+	返信/削除をボタン風にした。ちょっと場所とりすぎか？(再考の余地あり)<br>
+	ツイートにカーソルを乗せた時の背景色を水色→黄色にした。<br>
+	</div>
+
+	<div class='date'>2010/06/10</div>
+	<div class='cont'>
+	名前がMyTωitterからJSTwiに変わった。<br>
+	返信をRe、QT、RTに分けた。<br>
+	Re→@名前、QT→QT @名前:本文、RT→RT @名前:本文をテキストボックスに出力するようになっている。<br>
+	将来的にはRTは公式RTにしたい。<br>
+	新着ありのときタイトルに新着件数を出力するようにした(最大200件)<br>
+	</div>
+
+	<div class='date'>2010/06/09</div>
+	<div class='cont'>
+	APIの実行可能数を出力するようにした（配置場所は要再考）。<br>
+	HTML5のLocalStorageがcookieの代わりに使えそうだったので、cookieが使用不可なときに<br>
+	代わりに使うようにした。<br>
+	(現在確認している範囲ではChromeでしか動作しない。)<br>
+	</div>
+
+	<div class='date'>2010/06/08</div>
+	<div class='cont'>
+	PHPで実装していた機能のJavascriptへの移行が完了。<br>
+	これで今実装されている分については全部HTML＋Javascriptのみで動けるようになった。<br>
+	</div>
+
+	<div class='date'>2010/06/07</div>
+	<div class='cont'>
+	Webサーバを経由せず、ローカルファイル(html、javascript)から直接TwitterAPIを叩けるよう、<br>
+	OAuth認証からAPI呼び出し、画面作成まで全てJavascriptで作り直した。<br>
+	いくつか問題はあるが、一通りの機能は使用できる。<br>
+	現状判明している問題点<br>
+	1.consumerkey、consumersecretをjavascriptのソースにべた書きしているため配布ができない。<br>
+	→配布するとなったら、使用者各自でconsumerkey、consumersecretを取得してもらうことになる。<br>
+	2.Chromeではローカルファイルからcookieの操作ができないため、毎回ログイン作業が必要になる。<br>
+	→IE8、Firefox3.6.3では問題なく動作する。<br>
+	3.ログイン時の作業が面倒。リクエストトークン等のコピー＆ペーストが3度ある。<br>
+	→現状ではこれ以外のやり方が思い浮かばない。<br>
+	4.IEの見た目が他のブラウザと違う。<br>
+	→角を丸くするのと影を付けるスタイルが使えないため。<br>
+	</div>
+
+	<div class='date'>2010/05/30</div>
+	<div class='cont'>
+	フォロー/フォロワーの表示に前ページ、次ページ移動を追加。<br>
+	ただし、前ページ移動がうまく動かない。<br>
+	</div>
+
+	<div class='date'>2010/05/29</div>
+	<div class='cont'>
+	リプライの表示機能を追加。<br>
+	ホーム更新の通知をボタンを赤くする→ボタンの影を青くするに変更。<br>
+	返信、削除を文字からアイコンに変更。<br>
+	</div>
+
+	<div class='date'>2010/05/28</div>
+	<div class='cont'>
+	デザインを大幅に変更。<br>
+	角を丸くするのと影をつけるスタイルを多用。<br>
+	Chrome、FFは問題ないがIEが上記スタイルに対応していないため、見た目が違う。<br>
+	</div>
+
+	<div class='date'>2010/05/26</div>
+	<div class='cont'>
+	タイムライン、検索結果に「もっと読む」を追加<br>
+	</div>
+
+	<div class='date'>2010/05/23</div>
+	<div class='cont'>
+	特に機能追加は無し<br>
+	今までHTMLをソースにべた書きしていたのを、Smartyを使ってテンプレート化した。<br>
+	</div>
+
+	<div class='date'>2010/05/22</div>
+	<div class='cont'>
+	検索機能、ホームの新着チェック機能、入力文字数表示機能等追加。<br>
+	以下、改善の余地あり。<br>
+	・検索とツイートでテキストボックスを共有。<br>
+	・新着があったときに「ホーム更新」ボタンの色が変わるだけでは分かりにくい。<br>
+	・ユーザごとのタイムラインと検索結果で表示位置を共有。<br>
+	</div>
+
+	<div class='date'>2010/05/21</div>
+	<div class='cont'>
+	follow/followerの置き位置はとりあえずここ。スクロールバーはカッコ悪いのでなんとかしたい。<br>
+	内部処理を大幅変更。ユーザ情報、タイムライン、フォローそれぞれ非同期で取得できるように変更。<br>
+	</div>
+
+	<div class='date'>2010/05/20</div>
+	<div class='cont'>
+	followとfollowerの取得処理を作ったけど、置き場所に困った。<br>
+	横一列に並べてマウスホイールでぐりぐりスクロールさせるようなの作れないかなぁ<br>
+	</div>
+
+	<div class='date'>2010/05/19</div>
+	<div class='cont'>
+	ホームと指定ユーザのタイムラインを横に並べた。<br>
+	ユーザの表示はAjaxを使ってページの再読み込みなしに切り替えられるようにした。<br>
+	</div>
+</div>
+
+<div class='footer'>
+<div class='cpr'>copyright &copy; 2010-2011 <a href="https://twitter.com/k_e_n1">KEN1</a>.</div>
+<div class='gae'><a href='https://code.google.com/intl/ja/appengine/'><img src="https://code.google.com/appengine/images/appengine-silver-120x30.gif" alt="Powered by Google App Engine"></a></div>
+</div>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<META http-equiv='Content-Script-Type' content='text/javascript'>
+<link rel='stylesheet' href='manual.css'>
+
+<title>JSTwi - 操作説明</title>
+
+</head>
+
+<body>
+
+<div class='main'>
+
+<div class='header'>
+<a href='https://www.jstwi.com'>JSTwi</a>
+</div>
+
+<div class='top'>
+<div class='lastmod'>
+last modified 2010/12/26
+</div>
+</div>
+
+<div class='contents'>
+<p class='text_top'>JSTwi操作説明(まだ作成途中です)</p>
+</div>
+
+<div class='menu'>
+<p class='text'>目次
+<ol>
+	<li>インストール～起動、アンインストール</li>
+
+	<ul>
+		<li><a href='javascript:void(0)'>インストールする</a></li>
+		<li><a href='javascript:void(0)'>JSTwiを起動する</a></li>
+		<li><a href='javascript:void(0)'>アンインストールする</a></li>
+	</ul>
+
+	<li>ユーザ選択</li>
+
+	<ul>
+		<li><a href='javascript:void(0)'>ユーザを登録する</a></li>
+		<li><a href='javascript:void(0)'>ログインする</a></li>
+		<li><a href='javascript:void(0)'>ユーザを削除する</a></li>
+		<li><a href='javascript:void(0)'>OAuth認証なしでログインする</a></li>
+	</ul>
+
+	<li>設定</li>
+
+	<ul>
+		<li><a href='javascript:void(0)'>設定する</a></li>
+		<li><a href='javascript:void(0)'>NGワードを登録する</a></li>
+		<li><a href='javascript:void(0)'>NGワードを削除する</a></li>
+	</ul>
+
+	<li>更新チェック</li>
+
+	<ul>
+		<li><a href='javascript:void(0)'>更新チェックする</a></li>
+	</ul>
+
+	<li>タイムライン</li>
+
+	<ul>
+		<li><a href='javascript:void(0)'>タイムラインの見方</a></li>
+	</ul>
+
+	<li>Tips</li>
+
+	<ul>
+		<li><a href='javascript:void(0)'>書いておかないと気付かなそうな機能</a></li>
+	</ul>
+
+
+</ol>
+</p>
+</div>
+
+<!-- インストール～起動、アンインストール -->
+<div class='contents' id='cont'>
+<h1 class='title'>インストールする</h1>
+	<p class='text'>
+	1.jstwi.ZIPを適当なフォルダにコピーして展開する。<br>
+	<img src='manual_9.png'>
+	</p>
+</div>
+
+<div class='contents' id='cont'>
+<h1 class='title'>JSTwiを起動する</h1>
+	<p class='text'>
+	1.jstwiフォルダにあるindex.htmlをブラウザで開く。
+	<img src='manual_10.png'>
+	</p>
+</div>
+
+<div class='contents' id='cont'>
+<h1 class='title'>アンインストールする</h1>
+	<p class='text'>
+	1.jstwiフォルダをサブフォルダも含めて削除する。
+	<img src='manual_11.png'>
+	</p>
+</div>
+
+<!-- ユーザ選択 -->
+<div class='contents' id='cont'>
+<h1 class='title'>ユーザを登録する</h1>
+	<p class='text'>1.ユーザ選択画面で【新規登録】ボタンを押す。<br>
+	<img src='manual_1.png'>
+
+	2.【Sign in with Twitter】ボタンを押して、Twitter公式サイトを開く。<br>
+	<img src='manual_2.png'>
+
+	3.アクセス許可画面が表示されるので、注意書きをよく読んで問題なければ【許可する】ボタンを押す。<br>
+	※Twitter公式サイトにログインしていない状態の場合はIDとパスワードの入力画面が出ます。<br>
+	<img src='manual_3.png'>
+
+	4.PINコード(7桁の数字)が発行されるので、数字をクリップボードにコピーする。<br>
+	<img src='manual_4.png'>
+
+	5.JSTwiに戻って入力エリアにPINコードをペーストし、【開始】ボタンを押す。<br>
+	<span class='inf'>※登録した情報(ユーザID、スクリーン名、アクセストークン)はcookie（またはlocalStorage)に保存します。</span><br>
+	<span class='inf'>　Chromeでローカルファイルから実行した場合はcookieが使用できないためlocalStorageを使用しています。</span><br>
+
+	<img src='manual_5.png'>
+	</p>
+</div>
+
+<div class='contents' id='cont'>
+<h1 class='title'>ログインする</h1>
+	<p class='text'>
+	1.ユーザ選択画面でログインしたいユーザの【ログイン】ボタンを押す。<br>
+	<img src='manual_6.png'>
+	2.ログイン後にユーザを切り替える場合は、画面右端のメニューから[ユーザ切り替え]ボタンを押す。<br>
+	<img src='manual_28.png'>
+</div>
+
+<div class='contents' id='cont'>
+<h1 class='title'>ユーザを削除する</h1>
+	<p class='text'>
+	1.ユーザ選択画面で削除したいユーザの【削除】ボタンを押す。<br>
+	<img src='manual_14.png'>
+	2.削除確認画面が表示されるので、問題なければ【OK】ボタンを押す。
+	</p>
+</div>
+
+<div class='contents' id='cont'>
+<h1 class='title'>OAuth認証なしでログインする</h1>
+	<p class='text'>
+	1.ユーザ選択画面でゲストモード(認証)なしの【ログイン】ボタンを押す。<br>
+	<img src='manual_7.png'>
+
+	2.ゲストユーザとしてログインし、一部の機能を認証なしで使用可能となる。<br>
+	<img src='manual_8.png'>
+	</p>
+	<p class='text'>
+	ゲストモードで使用できる機能一覧
+	<ul>
+	<li>パブリックタイムライン表示</li>
+	<li>指定ユーザのタイムライン表示</li>
+	<li>検索</li>
+	</ul>
+	</p>
+</div>
+
+<!-- 設定 -->
+<div class='contents' id='cont'>
+<h1 class='title'>設定する</h1>
+	<p class='text'>
+	1.画面右端のメニューから[設定]ボタンを押す。<br>
+	<img src='manual_29.png'>
+	2.設定画面で以下の設定を行う。<br>
+	<img src='manual_12.png'>
+	<ul>
+		<li>一度に取得するツイート数　(初期値:20件)</li>
+		1回の要求で取得するタイムラインや検索結果等の件数を20～200件の範囲内で設定する。<br>
+		<li>新着チェック間隔(ホーム)　(初期値:60秒)</li>
+		ホームの新着チェックを行う間隔を30～3600秒の範囲内で設定する。<br>
+		<li>新着チェック間隔(Mention)　(初期値:300秒)</li>
+		Mentionの新着チェックを行う間隔を30～3600秒の範囲内で設定する。<br>
+		<li>お気に入りユーザ一覧更新間隔　(初期値:60秒)</li>
+		お気に入りユーザ一覧の更新を行う間隔を30～3600秒の範囲内で設定する。<br>
+		<li>新着自動読み込み　(初期値:しない)</li>
+		しない(チェックなし)：「新着xx件あり」を表示する。「新着xx件あり」がクリックされたら新着ツイートをタイムライン上に出力する。<br>
+		<img src='manual_17.png'>
+		する（チェックあり）：「新着xx件あり」を表示しない。新着を取得したらすぐにタイムライン上に出力する。<br>
+		<li>新着ツイートにスクロール　(初期値:しない)</li>
+		しない(チェックなし)：新着を読み込んだとき、先頭にスクロールしない。<br>
+		する（チェックあり）：新着を読み込んだとき、先頭にスクロールする。<br>
+		<span class='inf'>※新着自動読み込みが「する」になっている場合のみ有効。</span><br>
+		<li>短縮URLの展開　(初期値:しない)</li>
+		しない(チェックなし)：短縮URLにカーソルを乗せても何も表示しない。<br>
+		する（チェックあり）：短縮URLにカーソルを乗せたとき、短縮前のURLをポップアップで表示する。<br>
+		<span class='inf'>※短縮URLの展開にはhttp://www.jstwi.comで提供する短縮URL展開APIを使用しています。</span><br>
+		<img src='manual_18.png'>
+		<li>画像のプレビュー　(初期値:しない)</li>
+		しない(チェックなし)：画像、動画投稿サイトのURLにカーソルを乗せても何も表示しない。<br>
+		する（チェックあり）：画像、動画投稿サイトのURLにカーソルを乗せたとき、サムネイル画像をポップアップで表示する。<br>
+		<img src='manual_19.png'>
+		<li>公式RT非表示　(初期値:しない)</li>
+		しない(チェックなし)：ホームタイムラインに公式ツイートを表示する。<br>
+		<img src='manual_20.png'>
+		する（チェックあり）：ホームタイムラインに公式ツイートを表示しない。<br>
+		<li>NGワード非表示　(初期値:しない)</li>
+		しない(チェックなし)：全てのツイートを表示する。<br>
+		する（チェックあり）：NGワード設定で指定した文字列が含まれるツイートを表示しない。<br>
+		<li>片思いチェック(要塞ログイン)　(初期値:しない)</li>
+		しない(チェックなし)：片思いチェックをしない。<br>
+		する（チェックあり）：自分のフォロワー以外のツイートを赤色の線で囲む。<br>
+		<span class='inf'>フォロワー</span>
+		<img src='manual_24.png'>
+		<span class='inf'>フォロワー以外</span>
+		<img src='manual_21.png'>
+		<li>動画URLの抽出　(初期値:しない)</li>
+		しない(チェックなし)：ツイートに含まれる動画へのリンクを抽出する処理をしない。<br>
+		する（チェックあり）：ツイートに含まれる動画へのリンクを抽出する処理を行う。<br>
+		<span class='inf'>抽出された動画の数だけ下のアイコンが表示される。<br>アイコンクリックで動画を再生する。</span>
+		<img src='manual_36.png'>
+		<li>検索対象　(初期値:すべての言語)</li>
+		検索対象とする言語を選択する。<br>
+		<li>URL短縮(j.mpアカウント)　(初期値:なし)</li>
+		j.mpのLoginIDとAPIKeyを設定すると、URL短縮が使用できるようになる。<br>
+		<span class='inf'>アカウント設定なし</span>
+		<img src='manual_22.png'>
+		<span class='inf'>アカウント設定あり</span>
+		<img src='manual_23.png'>
+		<br>
+		<li>[NGワード設定]</li>
+		NGワード設定画面を開く。<br>
+		<li>[保存]</li>
+		設定した値をcookie（またはlocalStorage)に保存し、設定画面を閉じる。<br>
+		<span class='inf'>※Chromeでローカルファイルから実行した場合はcookieが使用できないためlocalStorageを使用しています。</span><br>
+		<li>[キャンセル]</li>
+		設定した値を保存せずに設定画面を閉じる。<br>
+	</ul>
+	</p>
+</div>
+
+<div class='contents' id='cont'>
+<h1 class='title'>NGワードを登録する</h1>
+	<p class='text'>
+	1.設定画面で[NGワード設定]ボタンを押す。<br>
+	<img src='manual_16.png'>
+	2.NGワード設定画面で登録したいNGワードを入力し、[追加]ボタンを押す。<br>
+	<span class='inf'>※NGワードには正規表現が使用できます。</span><br>
+	<img src='manual_13.png'>
+	3.リストに追加される。
+	<img src='manual_25.png'>
+	</p>
+</div>
+
+<div class='contents' id='cont'>
+<h1 class='title'>NGワードを削除する</h1>
+	<p class='text'>
+	1.削除したいNGワードを選択し、[削除]ボタンを押す<br>
+	<img src='manual_15.png'>
+	2.リストから削除される。
+	<img src='manual_26.png'>
+	</p>
+</div>
+
+
+<!-- 更新チェック -->
+<div class='contents' id='cont'>
+<h1 class='title'>更新チェックする</h1>
+	<p class='text'>1.画面右端のメニューから[更新チェック]ボタンを押す。<br>
+	<img src='manual_30.png'>
+
+	2.確認画面で[OK]ボタンを押すと、http://www.jstwi.comに更新チェックの要求を行う。<br>
+	<img src='manual_31.png'>
+
+	3.使用してるJSTwiが最新の場合は、以下のメッセージが出力される。<br>
+	<img src='manual_32.png'>
+
+	4.使用してるJSTwiが最新でない場合は、以下のメッセージが出力される。<br>
+	[OK]ボタンを押すと、http://www.jstwi.comからjstwi.ZIPをダウンロードする。<br>
+	<img src='manual_33.png'>
+	</p>
+</div>
+
+
+<!-- タイムライン -->
+<div class='contents' id='cont'>
+<h1 class='title'>タイムラインの見方</h1>
+	<p class='text'>
+	1.各部説明
+	<img src='manual_34.png'>
+
+		<ul>
+			<li>1.スクリーン名（名前）</li>
+			スクリーン名をクリックすると画面右側にユーザのプロフィールとタイムラインが表示される。
+			<li>2.ツイート</li>
+			@スクリーン名をクリックすると画面右側にユーザのプロフィールとタイムラインが表示される。<br>
+			URLをクリックするとリンク先に飛ぶ。<br>
+			#ハッシュタグをクリックすると画面右側にハッシュタグの検索結果が表示される。<br>
+			<li>3.お気に入り</li>
+			このツイートをお気に入りに登録する/登録解除する。<br>
+			<li>4.リツイート</li>
+			このツイートをリツイートする。<br>
+			<li>5.オプション</li>
+			オプションメニューを開く。<br>
+			<img src='manual_35.png'>
+			<li>6.投稿日時</li>
+			クリックすると公式サイト(http://twitter.com/スクリーン名/status/ステータスID)に飛ぶ。<br>
+			<li>7.クライアント名</li>
+			クリックするとそのクライアントに設定されたURL(クライアントの配布サイト等)に飛ぶ。<br>
+			<li>8.返信元</li>
+			in_reply_toが設定されている(返信ツイート)場合のみ表示される。<br>
+			クリックすると返信元のツイートをインライン表示する。<br>
+			<li>9.返信ボタン</li>
+			ツイート入力エリアに「@スクリーン名 」を入力し、in_reply_toを設定する。<br>
+			Ctrlキーを押したまま返信ボタンを押した場合は「@スクリーン名 」を追加入力し、in_reply_toは設定しない。<br>
+			<li>10.引用ボタン</li>
+			ツイート入力エリアに「 RT @スクリーン名 ツイート」を入力する。(非公式RT)<br>
+			<li>11.返信元ツイート</li>
+			8.返信元をクリックすると表示される。<br>
+			返信元の返信元…と遡って表示することもできる。<br>
+		</ul>
+
+	</p>
+</div>
+
+
+<!-- Tips -->
+<div class='contents' id='tips'>
+<h1 class='title'>Tips</h1>
+	<p class='text'>書いておかないと気付かなそうな機能<br>
+
+		<ul>
+			<li>フォロー:xxx人/フォロワー:xxx人をクリックすると右上にフォロー/フォロワーを100人ずつ表示</li>
+			<li>フォロー/フォロワー一覧のアイコン+文字表示形式では項目名クリックでソートできる</li>
+			<li>Shift+Enter、Ctrl+Enterでツイート([ツイート]ボタンを押したときと同じ)</li>
+			<li>ホーム、Mentionタブの左上にでる新着件数をクリックすると新着をTLに展開(「新着xx件あり」をクリックしたときと同じ)</li>
+			<li>ユーザタブでユーザ名を入力して[表示]ボタンを押すと、指定したユーザのプロフィール＋ツイート表示</li>
+			<li>ユーザのプロフィールでアイコンをクリックすると、表示しきれないプロフィールを全部表示</li>
+			<li>ユーザタブでテキストボックスをクリックするとユーザ表示履歴をプルダウンで表示(履歴は再起動でリセット)</li>
+			<li>検索タブでテキストボックスをクリックすると検索履歴をプルダウンで表示(履歴は再起動でリセット)</li>
+			<li>プロフィールでお気に入り:xxx件をクリックすると、そのユーザのお気に入り一覧を表示</li>
+			<li>自分が公式RTしたツイートを見たりRTを取り消したいときは、自分のプロフィールを開いて[リツイート]ボタンをクリック</li>
+			<li>ブロックしたユーザを見たりブロック解除をしたいときは、自分のプロフィールを開いて[ブロック]ボタンをクリック</li>
+			<li>保存した検索条件を見たり破棄したいときは、自分のプロフィールを開いて[保存した検索]ボタンをクリック</li>
+		</ul>
+
+	</p>
+</div>
+
+
+
+
+<div class='footer'>
+<div class='cpr'>copyright &copy; 2010-2011 <a href="https://twitter.com/k_e_n1">KEN1</a>.</div>
+<div class='gae'><a href='https://code.google.com/intl/ja/appengine/'><img src="https://code.google.com/appengine/images/appengine-silver-120x30.gif" alt="Powered by Google App Engine"></a></div>
+</div>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+[
+	{"size":"l","title":"マルチアカウント対応","image":"feature2"},
+	{"size":"l","title":"各種イベント通知","image":"feature3"},
+	{"size":"l","title":"グーグルマップやYoutube等外部サービス連携","image":"feature4"},
+	{"size":"l","title":"RSSリーダー","image":"feature5"},
+	{"size":"s","title":"下書き","image":"feature6s"},
+	{"size":"s","title":"ハッシュタグ登録","image":"feature7s"},
+	{"size":"s","title":"API残数表示","image":"feature8s"},
+	{"size":"s","title":"流速表示","image":"feature9s"},
+	{"size":"s","title":"ツールバーユーザー","image":"feature10s"},
+	{"size":"s","title":"英日、日英翻訳","image":"feature11s"},
+	{"size":"s","title":"Now Browsing","image":"feature13s"},
+	{"size":"s","title":"しおり","image":"feature14s"},
+	{"size":"s","title":"NG設定","image":"feature15s"}
+]
