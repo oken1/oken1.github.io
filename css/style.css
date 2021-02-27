@@ -23,3 +23,11 @@ a:hover { text-decoration: underline; }
 #cr {
 	text-align: right;
 }
+
+#toppage_main .githubsponsor iframe {
+	width: 32vw;
+	height: 12vh;
+	background-color: #ffffff;
+	border-radius: 1rem;
+	border: 1px solid #202020;
+}
