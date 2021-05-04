@@ -27,5 +27,5 @@ a:hover { text-decoration: underline; }
 #toppage_main .githubsponsor iframe {
 	width: 116px;
 	height: 35px;
-	border: 1px solid #202020;
+	border: none;
 }
