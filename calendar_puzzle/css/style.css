@@ -26,6 +26,22 @@ body {
 	visibility: visible;
 }
 
+.parts > div > div.p.bt {
+	border-top: 1px solid;
+}
+
+.parts > div > div.p.br {
+	border-right: 1px solid;
+}
+
+.parts > div > div.p.bb {
+	border-bottom: 1px solid;
+}
+
+.parts > div > div.p.bl {
+	border-left: 1px solid;
+}
+
 .parts > div > div.n {
 	visibility: hidden;
 }
