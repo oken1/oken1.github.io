@@ -12,11 +12,15 @@ $( document ).ready( () => {
 		{
 			grid: [grid, grid]
 		}
-	).on( 'dblclick', ( event ) => {
+	).on( 'wheel', ( event ) => {
 		let r = parseInt( $( event.currentTarget ).attr( 'rotate' ), 10 )
 		let s = parseInt( $( event.currentTarget ).attr( 'scale' ), 10 )
 
-		r = ( r == 270 ) ? 0 : r + 90
+		if ( event.originalEvent.deltaY < 0 ) {
+			r = ( r == 0 ) ? 270 : r - 90
+		} else {
+			r = ( r == 270 ) ? 0 : r + 90
+		}
 
 		$( event.currentTarget ).attr( 'rotate', r )
 			.css( { transform: `scale(${s}, 1) rotate(${r}deg)` } )
