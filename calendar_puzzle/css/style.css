@@ -79,3 +79,12 @@ body {
 	border: 1px #202020;
 	border-style: none solid solid none;
 }
+
+#user_guide {
+	position: absolute;
+	left: 128px;
+	top: 320px;
+	border: 1px #808080 dashed;
+	z-index: 200;
+	padding: 4px;
+}
