@@ -10,7 +10,8 @@ $( document ).ready( () => {
 		$( element ).attr( 'scale', 1 )
 	} ).draggable(
 		{
-			grid: [grid, grid]
+			grid: [grid, grid],
+			cancel: '.n'
 		}
 	).on( 'wheel', ( event ) => {
 		let r = parseInt( $( event.currentTarget ).attr( 'rotate' ), 10 )

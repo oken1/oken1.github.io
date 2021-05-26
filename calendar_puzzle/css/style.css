@@ -56,7 +56,7 @@ body {
 }
 
 .parts > div > div.n {
-	visibility: hidden;
+	background-color: transparent;
 }
 
 #calendar {
