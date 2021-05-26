@@ -1,5 +1,4 @@
 body {
-	box-sizing: border-box;
 	font-size: 14px;
 }
 
@@ -15,8 +14,6 @@ body {
 
 .parts > div > div {
 	box-sizing: border-box;
-	display: flex;
-	flex-direction: column;
 	width: 32px;
 	height: 32px;
 	background: #c0c0c0;
@@ -42,6 +39,22 @@ body {
 	border-left: 1px solid;
 }
 
+.parts > div > div.p.rtl {
+	border-top-left-radius: 8px;
+}
+
+.parts > div > div.p.rtr {
+	border-top-right-radius: 8px;
+}
+
+.parts > div > div.p.rbl {
+	border-bottom-left-radius: 8px;
+}
+
+.parts > div > div.p.rbr {
+	border-bottom-right-radius: 8px;
+}
+
 .parts > div > div.n {
 	visibility: hidden;
 }
@@ -60,8 +73,6 @@ body {
 
 #calendar > div > div.cp {
 	box-sizing: border-box;
-	display: flex;
-	flex-direction: column;
 	width: 32px;
 	height: 32px;
 	text-align: center;
