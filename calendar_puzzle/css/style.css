@@ -1,0 +1,54 @@
+body {
+	box-sizing: border-box;
+	font-size: 14px;
+}
+
+.parts {
+	position: absolute;
+	z-index: 100;
+}
+
+.parts > div {
+	display: flex;
+	flex-direction: row;
+}
+
+.parts > div > div {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	width: 32px;
+	height: 32px;
+	background: #c0c0c0;
+}
+
+.parts > div > div.p {
+	visibility: visible;
+}
+
+.parts > div > div.n {
+	visibility: hidden;
+}
+
+#calendar {
+	position: absolute;
+	left: 64px;
+	top: 64px;
+}
+
+#calendar > div {
+	display: flex;
+	flex-direction: row;
+	height: 32px
+}
+
+#calendar > div > div.cp {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	width: 32px;
+	height: 32px;
+	text-align: center;
+	border: 1px #202020;
+	border-style: none solid solid none;
+}
