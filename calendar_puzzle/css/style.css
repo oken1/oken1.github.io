@@ -23,19 +23,40 @@ body {
 	visibility: visible;
 }
 
-.parts > div > div.p.bt {
+#calendar {
+	position: absolute;
+	left: 64px;
+	top: 64px;
+}
+
+#calendar > div {
+	display: flex;
+	flex-direction: row;
+	height: 32px
+}
+
+#calendar > div > div.cp {
+	box-sizing: border-box;
+	width: 32px;
+	height: 32px;
+	text-align: center;
+	border-style: none solid solid none;
+	border-width: 1px;
+}
+
+div.p.bt {
 	border-top: 1px solid;
 }
 
-.parts > div > div.p.br {
+div.p.br {
 	border-right: 1px solid;
 }
 
-.parts > div > div.p.bb {
+div.p.bb {
 	border-bottom: 1px solid;
 }
 
-.parts > div > div.p.bl {
+div.p.bl {
 	border-left: 1px solid;
 }
 
@@ -59,26 +80,6 @@ body {
 	background-color: transparent;
 }
 
-#calendar {
-	position: absolute;
-	left: 64px;
-	top: 64px;
-}
-
-#calendar > div {
-	display: flex;
-	flex-direction: row;
-	height: 32px
-}
-
-#calendar > div > div.cp {
-	box-sizing: border-box;
-	width: 32px;
-	height: 32px;
-	text-align: center;
-	border: 1px #202020;
-	border-style: none solid solid none;
-}
 
 #user_guide {
 	position: absolute;
