@@ -1,4 +1,12 @@
-body { font-size: small; color: #222222; background: #cccccc; }
+body {
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	box-sizing: border-box;
+	color: #222222;
+	background: #cccccc;
+	font-family: Roboto,Arial,Helvetica,sans-serif;
+}
 
 a { text-decoration: none; color: #3388cc; }
 a:hover { text-decoration: underline; }
@@ -18,10 +26,12 @@ a:hover { text-decoration: underline; }
 
 #toppage_title {
 	font-size: 2rem;
+	font-weight: bold;
 }
 
 #cr {
 	text-align: right;
+	font-weight: bold;
 }
 
 #toppage_main .githubsponsor iframe {
